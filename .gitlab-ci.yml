@@ -23,8 +23,7 @@ cache:
     - .cache/pip
 
 before_script:
-  script:
-    conda install git -y
+  - conda install git -y
 
 test:
   script:
