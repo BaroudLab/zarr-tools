@@ -21,6 +21,7 @@ variables:
 cache:
   paths:
     - .cache/pip
+    - .tox/.tox
 
 before_script:
   - conda install git -y
