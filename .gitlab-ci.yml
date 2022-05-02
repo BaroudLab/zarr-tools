@@ -21,11 +21,6 @@ variables:
 cache:
   paths:
     - .cache/pip
-    - venv/
-
-before_script:
-  - python --version  # For debugging
-  - pip install .
 
 test:
   script:
