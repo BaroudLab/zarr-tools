@@ -13,7 +13,7 @@ def main(nd2_path:str, output:str=None, channel_axis:int=1, steps:int=6, dry_run
 
     if output is None:
         output = nd2_path.replace('.nd2', '.zarr')
-    out = to_zarr(data, output, steps=steps, dry_run=dry_run, channel_axis=channel_axis)
+    out = to_zarr(data, output, steps=steps, dry_run=dry_run, channel_axis=channel_axis, sizes=d.sizes)
     assert os.path.exists(out), "Failed..."
     exit(0)
 
