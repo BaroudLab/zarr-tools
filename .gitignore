@@ -1,2 +1,5 @@
 _version.py
-src*
+*pyc
+*pycache
+*cython
+*egg-info
