@@ -24,18 +24,22 @@ cache:
     # - .cache/pip
     - .tox/.tox
 
+stages:
+  - test
+  - build
 
 test:
+  stage: test
   script:
     - pip install tox flake8 pytest 
     - tox 
 
 docker-build:
   # Use the official docker image.
-  image: docker:latest
+  image: registry-gitlab.pasteur.fr/dsi-tools/docker-images/docker:latest
   stage: build
   services:
-    - docker:dind
+    - registry-gitlab.pasteur.fr/dsi-tools/docker-images/docker:dind
   before_script:
     - docker login -u "$CI_REGISTRY_USER" -p "$CI_REGISTRY_PASSWORD" $CI_REGISTRY
   # Default branch leaves tag empty (= latest tag)
