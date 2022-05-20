@@ -35,7 +35,7 @@ def to_zarr(
                 "multiscales": [
                     {
                         "datasets": datasets,
-                        "name": os.path.basename(baseurl),
+                        "title": os.path.basename(baseurl),
                         "type": "nd2",
                         "channel_axis": channel_axis,
                         "version": "0.1",
