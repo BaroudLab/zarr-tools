@@ -3,3 +3,6 @@ _version.py
 *pycache
 *cython
 *egg-info
+.tox
+venv
+build
