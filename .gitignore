@@ -6,3 +6,4 @@ _version.py
 .tox
 venv
 build
+.coverage
