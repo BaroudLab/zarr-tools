@@ -4,7 +4,7 @@ Convert nd2 to zarr
 
 ## Installation
 
-```pip install git+https://gitlab.pasteur.fr/aaristov/zarr-tools.git```
+```pip install zarr-tools```
 
 ## Usage
 
