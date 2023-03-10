@@ -2,9 +2,15 @@
 
 Convert nd2 to zarr
 
+[![License](https://img.shields.io/pypi/l/zarr-tools.svg?color=green)](https://github.com/BaroudLab/zarr-tools/raw/main/LICENSE)
+[![PyPI](https://img.shields.io/pypi/v/zarr-tools.svg?color=green)](https://pypi.org/project/zarr-tools)
+[![Python Version](https://img.shields.io/pypi/pyversions/zarr-tools.svg?color=green)](https://python.org)
+[![tests](https://github.com/BaroudLab/zarr-tools/workflows/tests/badge.svg)](https://github.com/BaroudLab/zarr-tools/actions)
+[![codecov](https://codecov.io/gh/BaroudLab/zarr-tools/branch/main/graph/badge.svg)](https://codecov.io/gh/BaroudLab/zarr-tools)
+
 ## Installation
 
-```pip install git+https://gitlab.pasteur.fr/aaristov/zarr-tools.git```
+```pip install zarr-tools```
 
 ## Usage
 
