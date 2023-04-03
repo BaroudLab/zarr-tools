@@ -1,3 +1,7 @@
+"""
+Export data to zarr
+"""
+
 import os
 
 import dask.array as da
@@ -12,6 +16,9 @@ def to_zarr(
     dry_run=False,
     **kwargs,
 ):
+    """
+    Saves multiscale zarr dataset, returns the path.zarr
+    """
     store = zarr.DirectoryStore(baseurl := path)
     grp = zarr.group(store)
 
