@@ -12,7 +12,7 @@ def to_zarr(
     dask_input: da.Array,
     path: str = None,
     steps=3,
-    channel_axis=1,
+    channel_axis=None,
     dry_run=False,
     **kwargs,
 ):

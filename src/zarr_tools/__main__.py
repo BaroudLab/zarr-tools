@@ -4,7 +4,7 @@ import json
 import nd2
 import os
 
-def main(nd2_path:str, output:str=None, channel_axis:int=1, steps:int=5, dry_run=False):
+def main(nd2_path:str, output:str=None, channel_axis : int|None = None, steps:int=5, dry_run=False):
     data = (d := nd2.ND2File(nd2_path)).to_dask().rechunk()
     print(d.sizes)
 
@@ -23,7 +23,7 @@ def main(nd2_path:str, output:str=None, channel_axis:int=1, steps:int=5, dry_run
         steps=steps, 
         dry_run=dry_run, 
         channel_axis=channel_axis, 
-        sizes=d.sizes,
+        sizes={k: d.sizes[k] for k in d.sizes},
         lut=get_lut(d))
     
     assert os.path.exists(out), "Saving zarr failed..."
