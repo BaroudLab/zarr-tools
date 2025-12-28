@@ -6,6 +6,7 @@ import os
 
 import dask.array as da
 import zarr
+from zarr.storage import LocalStore
 
 
 def to_zarr(
@@ -19,8 +20,9 @@ def to_zarr(
     """
     Saves multiscale zarr dataset, returns the path.zarr
     """
-    store = zarr.DirectoryStore(baseurl := path)
-    grp = zarr.group(store)
+    baseurl = path
+    store = LocalStore(baseurl)
+    grp = zarr.open_group(store, mode="a")
 
     print(baseurl)
     datasets = []
